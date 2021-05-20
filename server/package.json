@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "heroku-postbuild": "cd client && yarn add && yarn add --only=dev --no-shrinkwrap && yarn run build",
-     "start": "nodemon app.js"
+     "start": "node app.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
