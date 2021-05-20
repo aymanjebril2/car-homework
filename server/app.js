@@ -35,7 +35,7 @@ app.use(
       );
       const allowlist = [
         "http://localhost", //...(process.env.NODE_ENV !== "production" ? [ "http://localhost" ] : []),
-        "https://car-brand-models.herokuapp.com",
+        "https://cars-brands.herokuapp.com",
       ];
 
       if (!originToCheck || allowlist.includes(originToCheck)) {
