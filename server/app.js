@@ -13,7 +13,10 @@ app.use(
     credentials: true,
   })
 );
-const whitelist = ["http://localhost:5000"];
+const whitelist = [
+  "http://localhost:5000",
+  "https://carbrands-name.herokuapp.com",
+];
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin);
