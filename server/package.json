@@ -5,7 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "heroku-postbuild": "cd client && yarn add && yarn add --only=dev --no-shrinkwrap && yarn run build",
+    "start:heroku": "cd server && yarn install && NODE_ENV=production yarn start",
+    "deploy:heroku": "cat client/heroku.gitignore > client/.gitignore && yarn build:client && git add client/build/* && git add client/.gitignore && git commit -m 'client build' && git push heroku master -f && git reset HEAD^ && cat client/base.gitignore > client/.gitignore",
      "start": "node app.js"
   },
   "dependencies": {
