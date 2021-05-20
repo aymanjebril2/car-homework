@@ -5,10 +5,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-     "start": "node app.js"
+   "start": "node app.js"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "dependencies": {
     "cors": "^2.8.5",

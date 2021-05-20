@@ -9,6 +9,9 @@ node_modules
 /.pnp
 .pnp.js
 .env
+/yarn.lock
+**/yarn.lock
+yarn.lock
 
 # testing
 /coverage
