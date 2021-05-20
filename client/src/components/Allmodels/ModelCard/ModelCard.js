@@ -33,13 +33,13 @@ const ModelCard = ({
 
   const deletingModels = async () => {
     await axios({
-      url: `http://localhost:5000/api/model/${_id}`,
+      url: `/api/model/${_id}`,
       method: "DELETE",
     }).then((res) => console.log(res));
     setDeletModel((deleting) => !deleting);
   };
   const updatingModel = async () => {
-    const response = await axios.get(`http://localhost:5000/api/model/${_id}`);
+    const response = await axios.get(`/api/model/${_id}`);
     setUpdatingModel(response.data);
 
     setOpenEdit((open) => !open);

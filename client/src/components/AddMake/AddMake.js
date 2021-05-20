@@ -20,7 +20,7 @@ const AddMake = ({ setMakeAdded, setAdd }) => {
     event.preventDefault();
     // if (brand.title.length && brand.img.length && brand.link.length !== 0) {
     await axios({
-      url: `http://localhost:5000/api/brands`,
+      url: `/api/brands`,
       method: "POST",
       data: brand,
     })

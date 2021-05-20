@@ -20,7 +20,7 @@ const AddNewModel = ({ idBrand, setAdd, setModelsCrete }) => {
     event.preventDefault();
 
     await axios({
-      url: `http://localhost:5000/api/models`,
+      url: `/api/models`,
       method: "POST",
       data: newModel,
     })

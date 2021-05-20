@@ -52,13 +52,13 @@ const MakeCard = ({
 }) => {
   const deletingBrand = async () => {
     await axios({
-      url: `http://localhost:5000/api/Brands/${_id}`,
+      url: `/api/Brands/${_id}`,
       method: "DELETE",
     }).then((res) => console.log(res));
     setDeletBrand((deleting) => !deleting);
   };
   const updatingbrand = async () => {
-    const response = await axios.get(`http://localhost:5000/api/brands/${_id}`);
+    const response = await axios.get(`/api/brands/${_id}`);
     setUpdatingBrand(response.data);
 
     setOpenEdit((open) => !open);

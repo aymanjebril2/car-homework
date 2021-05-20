@@ -25,7 +25,7 @@ const GetAllCar = ({
   const classes = useStyles();
   const [make, setMake] = useState([]);
   const fetchMaker = async () => {
-    const URL = "http://localhost:5000/api/brands";
+    const URL = "/api/brands";
     const response = await axios.get(URL);
     setMake(response.data);
   };
@@ -41,7 +41,7 @@ const GetAllCar = ({
     event.preventDefault();
 
     axios({
-      url: `http://localhost:5000/api/brands/${updatingBrand._id}`,
+      url: `/api/brands/${updatingBrand._id}`,
       method: "PUT",
       data: updatingBrand,
     })

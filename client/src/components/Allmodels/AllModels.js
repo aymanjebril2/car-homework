@@ -11,7 +11,7 @@ const AllModels = ({ idBrand, modelsCrete }) => {
   const [openEdit, setOpenEdit] = useState(false);
   const [update, setUpdate] = useState(false);
   const fetchBrandModel = async () => {
-    let URL = `http://localhost:5000/api/models/${idBrand}`;
+    let URL = `/api/models/${idBrand}`;
     const res = await axios.get(URL);
     setModel(res.data);
   };
@@ -30,7 +30,7 @@ const AllModels = ({ idBrand, modelsCrete }) => {
     event.preventDefault();
 
     axios({
-      url: `http://localhost:5000/api/model/${updatingModel._id}`,
+      url: `/api/model/${updatingModel._id}`,
       method: "PUT",
       data: updatingModel,
     })
