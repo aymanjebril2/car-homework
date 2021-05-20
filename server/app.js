@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 function removePortIfDev(url) {
   const portRegex = /:[0-9]*$/;
   return url.replace(portRegex, "");
