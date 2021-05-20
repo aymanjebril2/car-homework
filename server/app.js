@@ -19,6 +19,10 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+function removePortIfDev(url) {
+  const portRegex = /:[0-9]*$/;
+  return url.replace(portRegex, "");
+}
 app.use(
   cors({
     origin: (origin, callback) => {
